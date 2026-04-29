@@ -1,0 +1,32 @@
+{
+  "seed": 42,
+  "device": "cuda",
+  "embedding_model": "AI-Growth-Lab/PatentSBERTa",
+  "emb_batch": 256,
+  "vectorizer": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 5,
+    "max_df": 0.9
+  },
+  "umap": {
+    "n_neighbors": 15,
+    "n_components": 5,
+    "min_dist": 0.0
+  },
+  "hdbscan": {
+    "min_cluster_size": 50,
+    "min_samples": 10
+  },
+  "merge_threshold": 0.9,
+  "bucket_cfg": {
+    "strong_prop_quantile": 0.66,
+    "latent_prop_quantile": 0.2,
+    "stability_min_strong": 0.6,
+    "weak_recent_cagr": 20.0,
+    "weak_tstat_min": 2.0,
+    "recent_years": 3
+  }
+}
